@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formulario de Ayuda Económica</title>
+<title>Financial Aid Form</title>
 
-<!-- jsPDF library pour génération PDF -->
+<!-- jsPDF library for PDF generation -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <style>
@@ -80,271 +80,264 @@
 
 <div class="container">
 
-  <!-- IMAGE HAUT -->
+  <!-- TOP IMAGE -->
   <img src="logo.png" alt="Logo" style="width: 100%; height: 30px; object-fit: cover;">
-  <!-- PHOTO RONDE -->
+  <!-- ROUND PHOTO -->
   <img src="foto.jpg" alt="Photo" style="width: 100%; height: 300px; object-fit: cover;">
 
-  <h2>FUNDACION ANRÉ RIEU</h2>
+  <h2>ANRÉ RIEU FOUNDATION</h2>
 
   <form id="mainForm">
 
-    <label>Nombre y Apellido</label>
+    <label>Full Name</label>
     <input type="text" name="fullname" required>
 
-    <label>Edad</label>
+    <label>Age</label>
     <input type="number" name="age" required>
 
-    <label>Ocupación</label>
+    <label>Occupation</label>
     <input type="text" name="occupation" required>
 
-    <label>Cantidad de hijos</label>
-    <input type="number" name="children">
+    <label>Country</label>
+    <select name="country" id="country" required>
+        <option value="">Select a country</option>
+        <option value="+93">Afghanistan</option>
+        <option value="+355">Albania</option>
+        <option value="+213">Algeria</option>
+        <option value="+376">Andorra</option>
+        <option value="+244">Angola</option>
+        <option value="+1-268">Antigua and Barbuda</option>
+        <option value="+54">Argentina</option>
+        <option value="+374">Armenia</option>
+        <option value="+61">Australia</option>
+        <option value="+43">Austria</option>
+        <option value="+994">Azerbaijan</option>
+        <option value="+1-242">Bahamas</option>
+        <option value="+973">Bahrain</option>
+        <option value="+880">Bangladesh</option>
+        <option value="+1-246">Barbados</option>
+        <option value="+32">Belgium</option>
+        <option value="+501">Belize</option>
+        <option value="+229">Benin</option>
+        <option value="+975">Bhutan</option>
+        <option value="+375">Belarus</option>
+        <option value="+95">Myanmar</option>
+        <option value="+591">Bolivia</option>
+        <option value="+387">Bosnia and Herzegovina</option>
+        <option value="+267">Botswana</option>
+        <option value="+55">Brazil</option>
+        <option value="+673">Brunei</option>
+        <option value="+359">Bulgaria</option>
+        <option value="+226">Burkina Faso</option>
+        <option value="+257">Burundi</option>
+        <option value="+855">Cambodia</option>
+        <option value="+237">Cameroon</option>
+        <option value="+1-246">Canada</option>
+        <option value="+238">Cape Verde</option>
+        <option value="+236">Central African Republic</option>
+        <option value="+235">Chad</option>
+        <option value="+56">Chile</option>
+        <option value="+86">China</option>
+        <option value="+57">Colombia</option>
+        <option value="+269">Comoros</option>
+        <option value="+242">Congo (Brazzaville)</option>
+        <option value="+243">Congo (Kinshasa)</option>
+        <option value="+506">Costa Rica</option>
+        <option value="+385">Croatia</option>
+        <option value="+53">Cuba</option>
+        <option value="+357">Cyprus</option>
+        <option value="+420">Czech Republic</option>
+        <option value="+45">Denmark</option>
+        <option value="+253">Djibouti</option>
+        <option value="+1-767">Dominica</option>
+        <option value="+1-809">Dominican Republic</option>
+        <option value="+670">East Timor</option>
+        <option value="+593">Ecuador</option>
+        <option value="+20">Egypt</option>
+        <option value="+503">El Salvador</option>
+        <option value="+240">Equatorial Guinea</option>
+        <option value="+291">Eritrea</option>
+        <option value="+372">Estonia</option>
+        <option value="+268">Eswatini</option>
+        <option value="+251">Ethiopia</option>
+        <option value="+679">Fiji</option>
+        <option value="+358">Finland</option>
+        <option value="+33">France</option>
+        <option value="+241">Gabon</option>
+        <option value="+220">Gambia</option>
+        <option value="+995">Georgia</option>
+        <option value="+49">Germany</option>
+        <option value="+233">Ghana</option>
+        <option value="+30">Greece</option>
+        <option value="+1-473">Grenada</option>
+        <option value="+502">Guatemala</option>
+        <option value="+224">Guinea</option>
+        <option value="+245">Guinea-Bissau</option>
+        <option value="+592">Guyana</option>
+        <option value="+509">Haiti</option>
+        <option value="+504">Honduras</option>
+        <option value="+36">Hungary</option>
+        <option value="+354">Iceland</option>
+        <option value="+91">India</option>
+        <option value="+62">Indonesia</option>
+        <option value="+98">Iran</option>
+        <option value="+964">Iraq</option>
+        <option value="+353">Ireland</option>
+        <option value="+972">Israel</option>
+        <option value="+39">Italy</option>
+        <option value="+1-876">Jamaica</option>
+        <option value="+81">Japan</option>
+        <option value="+962">Jordan</option>
+        <option value="+7">Kazakhstan</option>
+        <option value="+254">Kenya</option>
+        <option value="+686">Kiribati</option>
+        <option value="+850">North Korea</option>
+        <option value="+82">South Korea</option>
+        <option value="+965">Kuwait</option>
+        <option value="+996">Kyrgyzstan</option>
+        <option value="+856">Laos</option>
+        <option value="+371">Latvia</option>
+        <option value="+961">Lebanon</option>
+        <option value="+266">Lesotho</option>
+        <option value="+231">Liberia</option>
+        <option value="+218">Libya</option>
+        <option value="+423">Liechtenstein</option>
+        <option value="+370">Lithuania</option>
+        <option value="+352">Luxembourg</option>
+        <option value="+389">North Macedonia</option>
+        <option value="+261">Madagascar</option>
+        <option value="+265">Malawi</option>
+        <option value="+60">Malaysia</option>
+        <option value="+960">Maldives</option>
+        <option value="+223">Mali</option>
+        <option value="+356">Malta</option>
+        <option value="+692">Marshall Islands</option>
+        <option value="+222">Mauritania</option>
+        <option value="+230">Mauritius</option>
+        <option value="+52">Mexico</option>
+        <option value="+691">Micronesia</option>
+        <option value="+373">Moldova</option>
+        <option value="+377">Monaco</option>
+        <option value="+976">Mongolia</option>
+        <option value="+382">Montenegro</option>
+        <option value="+212">Morocco</option>
+        <option value="+258">Mozambique</option>
+        <option value="+264">Namibia</option>
+        <option value="+674">Nauru</option>
+        <option value="+977">Nepal</option>
+        <option value="+31">Netherlands</option>
+        <option value="+64">New Zealand</option>
+        <option value="+505">Nicaragua</option>
+        <option value="+227">Niger</option>
+        <option value="+234">Nigeria</option>
+        <option value="+47">Norway</option>
+        <option value="+968">Oman</option>
+        <option value="+92">Pakistan</option>
+        <option value="+680">Palau</option>
+        <option value="+507">Panama</option>
+        <option value="+675">Papua New Guinea</option>
+        <option value="+595">Paraguay</option>
+        <option value="+51">Peru</option>
+        <option value="+63">Philippines</option>
+        <option value="+48">Poland</option>
+        <option value="+351">Portugal</option>
+        <option value="+974">Qatar</option>
+        <option value="+40">Romania</option>
+        <option value="+7">Russia</option>
+        <option value="+250">Rwanda</option>
+        <option value="+1-869">Saint Kitts and Nevis</option>
+        <option value="+1-758">Saint Lucia</option>
+        <option value="+1-784">Saint Vincent and the Grenadines</option>
+        <option value="+685">Samoa</option>
+        <option value="+378">San Marino</option>
+        <option value="+239">Sao Tome and Principe</option>
+        <option value="+966">Saudi Arabia</option>
+        <option value="+221">Senegal</option>
+        <option value="+381">Serbia</option>
+        <option value="+248">Seychelles</option>
+        <option value="+232">Sierra Leone</option>
+        <option value="+65">Singapore</option>
+        <option value="+421">Slovakia</option>
+        <option value="+386">Slovenia</option>
+        <option value="+677">Solomon Islands</option>
+        <option value="+252">Somalia</option>
+        <option value="+27">South Africa</option>
+        <option value="+34">Spain</option>
+        <option value="+94">Sri Lanka</option>
+        <option value="+249">Sudan</option>
+        <option value="+211">South Sudan</option>
+        <option value="+597">Suriname</option>
+        <option value="+46">Sweden</option>
+        <option value="+41">Switzerland</option>
+        <option value="+963">Syria</option>
+        <option value="+886">Taiwan</option>
+        <option value="+992">Tajikistan</option>
+        <option value="+255">Tanzania</option>
+        <option value="+66">Thailand</option>
+        <option value="+228">Togo</option>
+        <option value="+676">Tonga</option>
+        <option value="+1-868">Trinidad and Tobago</option>
+        <option value="+216">Tunisia</option>
+        <option value="+90">Turkey</option>
+        <option value="+993">Turkmenistan</option>
+        <option value="+688">Tuvalu</option>
+        <option value="+256">Uganda</option>
+        <option value="+380">Ukraine</option>
+        <option value="+971">United Arab Emirates</option>
+        <option value="+44">United Kingdom</option>
+        <option value="+1">United States</option>
+        <option value="+598">Uruguay</option>
+        <option value="+998">Uzbekistan</option>
+        <option value="+678">Vanuatu</option>
+        <option value="+379">Vatican</option>
+        <option value="+58">Venezuela</option>
+        <option value="+84">Vietnam</option>
+        <option value="+967">Yemen</option>
+        <option value="+260">Zambia</option>
+        <option value="+263">Zimbabwe</option>
+    </select>
 
-    <label>País</label>
-<select name="country" id="country" required>
-    <option value="">Selecciona un país</option>
-    <option value="+93">Afghanistan</option>
-    <option value="+355">Albanie</option>
-    <option value="+213">Algérie</option>
-    <option value="+376">Andorre</option>
-    <option value="+244">Angola</option>
-    <option value="+1-268">Antigua-et-Barbuda</option>
-    <option value="+54">Argentine</option>
-    <option value="+374">Arménie</option>
-    <option value="+61">Australie</option>
-    <option value="+43">Autriche</option>
-    <option value="+994">Azerbaïdjan</option>
-    <option value="+1-242">Bahamas</option>
-    <option value="+973">Bahreïn</option>
-    <option value="+880">Bangladesh</option>
-    <option value="+1-246">Barbade</option>
-    <option value="+32">Belgique</option>
-    <option value="+501">Belize</option>
-    <option value="+229">Bénin</option>
-    <option value="+975">Bhoutan</option>
-    <option value="+375">Biélorussie</option>
-    <option value="+95">Birmanie</option>
-    <option value="+591">Bolivie</option>
-    <option value="+387">Bosnie-Herzégovine</option>
-    <option value="+267">Botswana</option>
-    <option value="+55">Brésil</option>
-    <option value="+673">Brunei</option>
-    <option value="+359">Bulgarie</option>
-    <option value="+226">Burkina Faso</option>
-    <option value="+257">Burundi</option>
-    <option value="+855">Cambodge</option>
-    <option value="+237">Cameroun</option>
-    <option value="+1-246">Canada</option>
-    <option value="+238">Cap-Vert</option>
-    <option value="+236">République centrafricaine</option>
-    <option value="+235">Tchad</option>
-    <option value="+56">Chili</option>
-    <option value="+86">Chine</option>
-    <option value="+57">Colombie</option>
-    <option value="+269">Comores</option>
-    <option value="+242">Congo (Brazzaville)</option>
-    <option value="+243">Congo (Kinshasa)</option>
-    <option value="+506">Costa Rica</option>
-    <option value="+385">Croatie</option>
-    <option value="+53">Cuba</option>
-    <option value="+357">Chypre</option>
-    <option value="+420">République tchèque</option>
-    <option value="+45">Danemark</option>
-    <option value="+253">Djibouti</option>
-    <option value="+1-767">Dominique</option>
-    <option value="+1-809">République dominicaine</option>
-    <option value="+670">Timor oriental</option>
-    <option value="+593">Équateur</option>
-    <option value="+20">Égypte</option>
-    <option value="+503">El Salvador</option>
-    <option value="+240">Guinée équatoriale</option>
-    <option value="+291">Érythrée</option>
-    <option value="+372">Estonie</option>
-    <option value="+268">Eswatini</option>
-    <option value="+251">Éthiopie</option>
-    <option value="+679">Fidji</option>
-    <option value="+358">Finlande</option>
-    <option value="+33">France</option>
-    <option value="+241">Gabon</option>
-    <option value="+220">Gambie</option>
-    <option value="+995">Géorgie</option>
-    <option value="+49">Allemagne</option>
-    <option value="+233">Ghana</option>
-    <option value="+30">Grèce</option>
-    <option value="+1-473">Grenade</option>
-    <option value="+502">Guatemala</option>
-    <option value="+224">Guinée</option>
-    <option value="+245">Guinée-Bissau</option>
-    <option value="+592">Guyana</option>
-    <option value="+509">Haïti</option>
-    <option value="+504">Honduras</option>
-    <option value="+36">Hongrie</option>
-    <option value="+354">Islande</option>
-    <option value="+91">Inde</option>
-    <option value="+62">Indonésie</option>
-    <option value="+98">Iran</option>
-    <option value="+964">Irak</option>
-    <option value="+353">Irlande</option>
-    <option value="+972">Israël</option>
-    <option value="+39">Italie</option>
-    <option value="+1-876">Jamaïque</option>
-    <option value="+81">Japon</option>
-    <option value="+962">Jordanie</option>
-    <option value="+7">Kazakhstan</option>
-    <option value="+254">Kenya</option>
-    <option value="+686">Kiribati</option>
-    <option value="+850">Corée du Nord</option>
-    <option value="+82">Corée du Sud</option>
-    <option value="+965">Koweït</option>
-    <option value="+996">Kirghizistan</option>
-    <option value="+856">Laos</option>
-    <option value="+371">Lettonie</option>
-    <option value="+961">Liban</option>
-    <option value="+266">Lesotho</option>
-    <option value="+231">Liberia</option>
-    <option value="+218">Libye</option>
-    <option value="+423">Liechtenstein</option>
-    <option value="+370">Lituanie</option>
-    <option value="+352">Luxembourg</option>
-    <option value="+389">Macédoine du Nord</option>
-    <option value="+261">Madagascar</option>
-    <option value="+265">Malawi</option>
-    <option value="+60">Malaisie</option>
-    <option value="+960">Maldives</option>
-    <option value="+223">Mali</option>
-    <option value="+356">Malte</option>
-    <option value="+692">Îles Marshall</option>
-    <option value="+222">Mauritanie</option>
-    <option value="+230">Maurice</option>
-    <option value="+52">Mexique</option>
-    <option value="+691">Micronésie</option>
-    <option value="+373">Moldavie</option>
-    <option value="+377">Monaco</option>
-    <option value="+976">Mongolie</option>
-    <option value="+382">Monténégro</option>
-    <option value="+212">Maroc</option>
-    <option value="+258">Mozambique</option>
-    <option value="+264">Namibie</option>
-    <option value="+674">Nauru</option>
-    <option value="+977">Népal</option>
-    <option value="+31">Pays-Bas</option>
-    <option value="+64">Nouvelle-Zélande</option>
-    <option value="+505">Nicaragua</option>
-    <option value="+227">Niger</option>
-    <option value="+234">Nigéria</option>
-    <option value="+47">Norvège</option>
-    <option value="+968">Oman</option>
-    <option value="+92">Pakistan</option>
-    <option value="+680">Palaos</option>
-    <option value="+507">Panama</option>
-    <option value="+675">Papouasie-Nouvelle-Guinée</option>
-    <option value="+595">Paraguay</option>
-    <option value="+51">Pérou</option>
-    <option value="+63">Philippines</option>
-    <option value="+48">Pologne</option>
-    <option value="+351">Portugal</option>
-    <option value="+974">Qatar</option>
-    <option value="+40">Roumanie</option>
-    <option value="+7">Russie</option>
-    <option value="+250">Rwanda</option>
-    <option value="+1-869">Saint-Kitts-et-Nevis</option>
-    <option value="+1-758">Sainte-Lucie</option>
-    <option value="+1-784">Saint-Vincent-et-les-Grenadines</option>
-    <option value="+685">Samoa</option>
-    <option value="+378">Saint-Marin</option>
-    <option value="+239">Sao Tomé-et-Principe</option>
-    <option value="+966">Arabie saoudite</option>
-    <option value="+221">Sénégal</option>
-    <option value="+381">Serbie</option>
-    <option value="+248">Seychelles</option>
-    <option value="+232">Sierra Leone</option>
-    <option value="+65">Singapour</option>
-    <option value="+421">Slovaquie</option>
-    <option value="+386">Slovénie</option>
-    <option value="+677">Îles Salomon</option>
-    <option value="+252">Somalie</option>
-    <option value="+27">Afrique du Sud</option>
-    <option value="+34">Espagne</option>
-    <option value="+94">Sri Lanka</option>
-    <option value="+249">Soudan</option>
-    <option value="+211">Soudan du Sud</option>
-    <option value="+597">Suriname</option>
-    <option value="+46">Suède</option>
-    <option value="+41">Suisse</option>
-    <option value="+963">Syrie</option>
-    <option value="+886">Taïwan</option>
-    <option value="+992">Tadjikistan</option>
-    <option value="+255">Tanzanie</option>
-    <option value="+66">Thaïlande</option>
-    <option value="+228">Togo</option>
-    <option value="+676">Tonga</option>
-    <option value="+1-868">Trinité-et-Tobago</option>
-    <option value="+216">Tunisie</option>
-    <option value="+90">Turquie</option>
-    <option value="+993">Turkménistan</option>
-    <option value="+688">Tuvalu</option>
-    <option value="+256">Ouganda</option>
-    <option value="+380">Ukraine</option>
-    <option value="+971">Émirats arabes unis</option>
-    <option value="+44">Royaume-Uni</option>
-    <option value="+1">États-Unis</option>
-    <option value="+598">Uruguay</option>
-    <option value="+998">Ouzbékistan</option>
-    <option value="+678">Vanuatu</option>
-    <option value="+379">Vatican</option>
-    <option value="+58">Venezuela</option>
-    <option value="+84">Vietnam</option>
-    <option value="+967">Yémen</option>
-    <option value="+260">Zambie</option>
-    <option value="+263">Zimbabwe</option>
-</select>
-
-    <label>Número de celular</label>
+    <label>Mobile Number</label>
     <div style="display: flex; gap: 5px;">
-        <!-- Case indicatif non modifiable -->
+        <!-- Country code read-only -->
         <input type="text" id="phoneCode" readonly style="width: 80px; text-align: center; background: #eee; border-radius: 5px; border: 1px solid #aaa;" />
-        <!-- Case numéro principal -->
-        <input type="text" name="phone" id="phone" required placeholder="Número" pattern="\d*" inputmode="numeric" style="flex: 1;" />
+        <!-- Main number -->
+        <input type="text" name="phone" id="phone" required placeholder="Number" pattern="\d*" inputmode="numeric" style="flex: 1;" />
     </div>
 
-    <label>¿Cuál es su dirección exacta?</label>
-    <textarea name="address" required></textarea>
-
-    <label>Cantidad de dinero que desea recibir</label>
+    <label>Amount of money you wish to receive</label>
     <div class="euro-wrapper">
         <input type="number" name="amount" id="amount" required min="1" placeholder="0">
         <span>€</span>
     </div>
 
-    <label>¿Qué hará con el dinero?</label>
+    <label>What will you do with the money?</label>
     <textarea name="purpose" required></textarea>
 
-    <label>¿Se compromete usted a pagar el impuesto asignado?</label>
+    <label>Do you agree to pay the assigned tax?</label>
     <select name="taxAgree" required>
-        <option value="">Seleccione...</option>
-        <option>Sí, estoy de acuerdo a pagar el impuesto</option>
+        <option value="">Select...</option>
+        <option>Yes, I agree to pay the tax</option>
         <option>No</option>
     </select>
 
-    <button type="submit">ENVIAR SOLICITUD</button>
+    <button type="submit">SUBMIT REQUEST</button>
 
   </form>
- <!-- IMAGE HAUT -->
-  <div> <img src="logo.png" alt="Logo" style="width: 100%; height: 30px; object-fit: cover;"> </div>
+
+  <!-- BOTTOM IMAGE -->
+  <div><img src="logo.png" alt="Logo" style="width: 100%; height: 30px; object-fit: cover;"></div>
 
 </div>
 
 <script>
-const { jsPDF } = window.jspdf;
-
 const countrySelect = document.getElementById('country');
 const phoneInput = document.getElementById('phone');
 const phoneCode = document.getElementById('phoneCode');
 
 countrySelect.addEventListener('change', function() {
     const code = this.value || '';
-    phoneCode.value = code; // Remplit l'indicatif
+    phoneCode.value = code;
     phoneInput.focus();
 });
 
@@ -352,47 +345,38 @@ document.getElementById("mainForm").addEventListener("submit", function(e) {
     e.preventDefault();
     const form = e.target;
 
+    // Get values
     const fullname = form.fullname.value;
     const age = form.age.value;
     const occupation = form.occupation.value;
-    const children = form.children.value;
     const countryName = form.country.options[form.country.selectedIndex].text;
-    const phone = phoneCode.value + phoneInput.value; // Numéro complet
-    const address = form.address.value;
+    const phone = phoneCode.value + phoneInput.value;
     const amount = form.amount.value;
     const purpose = form.purpose.value;
     const taxAgree = form.taxAgree.value;
 
-    const doc = new jsPDF();
+    // Create WhatsApp message
+    let message = `Financial aid request:\n`;
+    message += `Name: ${fullname}\n`;
+    message += `Age: ${age}\n`;
+    message += `Occupation: ${occupation}\n`;
+    message += `Country: ${countryName}\n`;
+    message += `Phone: ${phone}\n`;
+    message += `Requested amount: ${amount} €\n`;
+    message += `Purpose of money: ${purpose}\n`;
+    message += `Tax agreement: ${taxAgree}`;
 
-    doc.setFontSize(16);
-    doc.text("Datos de la persona que recibirá", 20, 20);
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
 
-    doc.setFontSize(12);
-    doc.text(`Nombre: ${fullname}`, 20, 35);
-    doc.text(`Edad: ${age}`, 20, 45);
-    doc.text(`Ocupación: ${occupation}`, 20, 55);
-    doc.text(`Cantidad de hijos: ${children}`, 20, 65);
-    doc.text(`País: ${countryName}`, 20, 75);
-    doc.text(`Teléfono: ${phone}`, 20, 85);
-    doc.text(`Dirección: ${address}`, 20, 95);
-    doc.text(`Cantidad a enviar: ${amount} €`, 20, 105);
-    doc.text(`Propósito del dinero: ${purpose}`, 20, 115);
-    doc.text(`Compromiso impuesto: ${taxAgree}`, 20, 125);
+    // Replace "16135189388" with your actual WhatsApp number
+    const whatsappNumber = "16135189388";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-    doc.save("solicitud.pdf");
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
 
-    // Message en espagnol après le PDF
-    const mensaje = "Su PDF está listo. Por favor, presente este documento al agente encargado de procesar su solicitud. ¿Desea continuar?";
-    const continuar = confirm(mensaje);
-
-    if (continuar) {
-        // Remplace "16135189388" par le numéro WhatsApp réel
-        window.location.href = "https://wa.me/16135189388";
-    } else {
-        window.close();
-    }
-
+    // Reset form
     form.reset();
     phoneCode.value = '';
     phoneInput.value = '';
